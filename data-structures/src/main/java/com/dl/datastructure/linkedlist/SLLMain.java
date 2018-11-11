@@ -23,7 +23,11 @@ public class SLLMain {
 		
 		System.out.println();
 		
-		System.out.println(list.findMiddleNode());
+		list.reverse();
+		
+		list.print();
+		
+		//System.out.println(list.nthNodeFromEnd(5));
 
 	}
 

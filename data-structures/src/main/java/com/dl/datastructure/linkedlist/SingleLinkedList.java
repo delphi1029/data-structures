@@ -61,6 +61,34 @@ public class SingleLinkedList {
 		 return ptr2 == null? 0:ptr2.data;
 	 }
 	 
+	 public int nthNodeFromEnd(int n) {
+		 SLLNode ptr = head;
+		 SLLNode ptrNth = head;
+		 
+		int count = 1; 
+		while(ptr!=null) {
+			if(count > n)
+				ptrNth = ptrNth.next;
+			ptr = ptr.next;
+			count++;
+		 }
+		return ptrNth.data;
+	 }
+	 
+	 public void reverse() {
+		 SLLNode prev = null;
+		 SLLNode current = head;
+		 SLLNode next = null;
+		 
+		 while(current != null) {
+			 next = current.next;
+			 current.next = prev;
+			 prev = current;
+			 current = next;
+		 }
+		 
+	 }
+	 
 	 
 	 private static class SLLNode {
 		
