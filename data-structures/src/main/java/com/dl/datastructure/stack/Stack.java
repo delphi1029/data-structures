@@ -47,6 +47,34 @@ public class Stack {
 	}
 	
 	
+	/*
+	 *  1 < 2 > 3 > 4
+	 * 
+	 * 
+	 */
+	
+	public Node reverse() {
+		Node node = head;
+		Node next = null;
+		Node prev = null;
+		
+		while(node != null) {
+			next = node.next;
+			node.next = prev;
+			prev = node;
+			node = next;
+		}
+		
+		return prev;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 	public static void main(String[] args) {
 		
 		Stack stack = new Stack();
